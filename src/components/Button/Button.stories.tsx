@@ -11,10 +11,11 @@ const meta = {
       url: 'figmaURL',
     },
   },
+  args: { text: 'Text' },
 } as Meta<typeof Button>;
 
 export default meta;
 
-export const Template: StoryFn<typeof Button> = (args) => (
-  <Button {...args}>Text</Button>
+export const Template: StoryFn<typeof Button> = ({ ...args }) => (
+  <Button {...args}>{args.text}</Button>
 );
