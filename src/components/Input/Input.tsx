@@ -12,7 +12,7 @@ export function Input({
       type="text"
       placeholder="검색어를 입력해주세요! :)"
       className={tw(
-        'h-20 w-full rounded-[40px] border border-light-gray px-10 text-xl text-light-gray',
+        'h-20 w-full rounded-[40px] border border-light-gray px-10 font-line-seed-sans-kr text-xl text-light-gray',
         className
       )}
       {...restProps}
