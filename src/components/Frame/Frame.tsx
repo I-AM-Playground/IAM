@@ -9,7 +9,10 @@ export function Frame({
 }: FrameProps<'div'>) {
   return (
     <div
-      className={tw('h-[360px] w-1/2 rounded-default bg-dark-gray', className)}
+      className={tw(
+        'flex h-full w-full items-center justify-center rounded-default bg-dark-gray',
+        className
+      )}
       {...restProps}
     >
       {children}
