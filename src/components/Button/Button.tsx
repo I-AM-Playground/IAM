@@ -11,7 +11,7 @@ export function Button({
     <button
       type="button"
       className={tw(
-        'w-full h-[100px] rounded-lg bg-red text-xl font-bold text-white',
+        'h-[100px] w-full rounded-lg bg-red font-line-seed-sans-kr text-xl font-bold text-white',
         className
       )}
       {...restProps}
