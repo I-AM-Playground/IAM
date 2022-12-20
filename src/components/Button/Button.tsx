@@ -11,7 +11,7 @@ export function Button({
     <button
       type="button"
       className={tw(
-        'h-[100px] w-full rounded-lg bg-red font-line-seed-sans-kr text-xl font-bold text-white',
+        'flex h-[100px] w-full items-center justify-center rounded-lg bg-red font-line-seed-sans-kr text-xl font-bold text-white',
         className
       )}
       {...restProps}
@@ -20,3 +20,15 @@ export function Button({
     </button>
   );
 }
+
+type TitleProps<T extends React.ElementType> = Component<T>;
+
+function Title({ children, className, ...restProps }: TitleProps<'p'>) {
+  return (
+    <p className={tw('w-full', className)} {...restProps}>
+      {children}
+    </p>
+  );
+}
+
+Button.Title = Title;
