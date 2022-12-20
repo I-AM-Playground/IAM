@@ -22,4 +22,15 @@ export function IconButton({
   );
 }
 
+type TitleProps<T extends React.ElementType> = Component<T>;
+
+function Title({ children, className, ...restProps }: TitleProps<'p'>) {
+  return (
+    <p className={tw('text-xs text-dark-gray', className)} {...restProps}>
+      {children}
+    </p>
+  );
+}
+
 IconButton.Icon = Icon;
+IconButton.Title = Title;
