@@ -5,6 +5,7 @@ import {
 import type { Meta, StoryFn } from '@storybook/react';
 import { Frame } from '../Frame';
 import { Icon } from '../Icon';
+import { IconButton } from '../IconButton';
 import { SongItem } from '../SongItem';
 import { SongCard } from './SongCard';
 
@@ -33,6 +34,8 @@ export const Template: StoryFn<typeof SongCard> = (args) => (
         <SongItem.Singer>{args.singer}</SongItem.Singer>
       </SongItem.Info>
     </SongItem>
-    <Icon icon={EllipsisHorizontalIcon} className="h-10 w-10" />
+    <IconButton className="h-10 w-10">
+      <Icon icon={EllipsisHorizontalIcon} className="h-10 w-10" />
+    </IconButton>
   </SongCard>
 );
