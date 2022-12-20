@@ -10,7 +10,7 @@ export function NavItem({
   return (
     <div
       className={tw(
-        'flex h-[60px] w-full items-center justify-center border-r border-light-gray font-line-seed-sans-kr text-lg font-bold text-black',
+        'flex h-[60px] w-full items-center justify-center font-line-seed-sans-kr text-lg font-bold text-black',
         className
       )}
       {...restProps}
