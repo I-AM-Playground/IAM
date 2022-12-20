@@ -1,4 +1,6 @@
 import { twMerge as tw } from 'tailwind-merge';
+import { Icon } from '../Icon';
+
 type IconButtonProps<T extends React.ElementType> = Component<T>;
 
 export function IconButton({
@@ -19,3 +21,5 @@ export function IconButton({
     </button>
   );
 }
+
+IconButton.Icon = Icon;
