@@ -8,7 +8,7 @@ export function SongItem({
   ...restProps
 }: SongItemProps<'div'>) {
   return (
-    <div className={tw('', className)} {...restProps}>
+    <div className={tw('flex items-center', className)} {...restProps}>
       {children}
     </div>
   );

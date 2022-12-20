@@ -19,7 +19,7 @@ const meta = {
 export default meta;
 
 export const Template: StoryFn<typeof SongItem> = ({ ...args }) => (
-  <SongItem className="flex items-center" {...args}>
+  <SongItem {...args}>
     <Frame className="mr-5 h-[72px] w-[72px] border border-dark-gray bg-white">
       <Icon icon={MusicalNoteIcon} className="h-10 w-10" />
     </Frame>
