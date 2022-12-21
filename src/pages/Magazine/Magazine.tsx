@@ -1,4 +1,8 @@
-import { MusicalNoteIcon, ListBulletIcon } from '@heroicons/react/24/outline';
+import {
+  MusicalNoteIcon,
+  ListBulletIcon,
+  MagnifyingGlassIcon,
+} from '@heroicons/react/24/outline';
 import { BackwardIcon, ForwardIcon, PlayIcon } from '@heroicons/react/24/solid';
 import { twMerge as tw } from 'tailwind-merge';
 import { ContentsWrap } from '../../components/ContentsWrap';
@@ -6,12 +10,14 @@ import { Frame } from '../../components/Frame';
 import { Icon } from '../../components/Icon';
 import { IconButton } from '../../components/IconButton';
 import { InfoCard } from '../../components/InfoCard';
+import { Input } from '../../components/Input';
 import { Logo } from '../../components/Logo';
 import { Main } from '../../components/Main';
 import { NavItem } from '../../components/NavItem';
 import { NavList } from '../../components/NavList';
 import { PlayBar } from '../../components/PlayBar';
 import { PlayNav } from '../../components/PlayNav';
+import { SearchForm } from '../../components/SearchForm';
 import { SideNav } from '../../components/SideNav';
 import { SongItem } from '../../components/SongItem';
 
@@ -48,6 +54,17 @@ export function Magazine({
           </NavList>
         </SideNav>
         <Main className="ml-[450px]">
+          <SearchForm className="relative mx-auto mb-20 w-[calc(100%-204px)]">
+            <SearchForm.Label>
+              <Input type="search" />
+              <IconButton className="absolute right-5 top-1/2 -translate-y-1/2">
+                <IconButton.Icon
+                  icon={MagnifyingGlassIcon}
+                  className="h-8 w-8"
+                />
+              </IconButton>
+            </SearchForm.Label>
+          </SearchForm>
           <ContentsWrap>
             <InfoCard className="w-[calc((100%-40px)/3)]">
               <Frame className="h-[380px]" />
