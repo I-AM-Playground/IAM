@@ -9,7 +9,7 @@ export function PlayBar({
   return (
     <div
       className={tw(
-        'relative flex h-[100px] place-content-between items-center bg-dark-gray px-10',
+        'relative flex h-[100px] w-screen place-content-between items-center bg-dark-gray px-10',
         className
       )}
       {...restProps}
