@@ -5,9 +5,9 @@ export function SideNav({
   children,
   className,
   ...restProps
-}: SideNavProps<'div'>) {
+}: SideNavProps<'section'>) {
   return (
-    <div
+    <section
       className={tw(
         'flex h-full w-[450px] flex-col items-center border-r border-light-gray pt-[60px]',
         className
@@ -15,6 +15,6 @@ export function SideNav({
       {...restProps}
     >
       {children}
-    </div>
+    </section>
   );
 }
