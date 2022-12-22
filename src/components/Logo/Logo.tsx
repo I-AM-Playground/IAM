@@ -6,7 +6,10 @@ type LogoProps<T extends React.ElementType> = Component<T>;
 export function Logo({ children, className, ...restProps }: LogoProps<'div'>) {
   return (
     <div
-      className={tw('w-[500px] font-line-seed-sans-kr font-bold', className)}
+      className={tw(
+        'w-[500px] font-line-seed-sans-kr font-bold leading-normal',
+        className
+      )}
       {...restProps}
     >
       <img
