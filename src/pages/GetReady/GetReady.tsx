@@ -1,9 +1,4 @@
-import {
-  MusicalNoteIcon,
-  ListBulletIcon,
-  FilmIcon,
-  MagnifyingGlassIcon,
-} from '@heroicons/react/24/outline';
+import { MusicalNoteIcon, ListBulletIcon } from '@heroicons/react/24/outline';
 import { BackwardIcon, ForwardIcon, PlayIcon } from '@heroicons/react/24/solid';
 import { NavLink } from 'react-router-dom';
 import { twMerge as tw } from 'tailwind-merge';
@@ -11,28 +6,26 @@ import { ContentsWrap } from '../../components/ContentsWrap';
 import { Frame } from '../../components/Frame';
 import { Icon } from '../../components/Icon';
 import { IconButton } from '../../components/IconButton';
-import { InfoCard } from '../../components/InfoCard';
-import { Input } from '../../components/Input';
 import { Logo } from '../../components/Logo';
 import { Main } from '../../components/Main';
 import { NavItem } from '../../components/NavItem';
 import { NavList } from '../../components/NavList';
 import { PlayBar } from '../../components/PlayBar';
 import { PlayNav } from '../../components/PlayNav';
-import { SearchForm } from '../../components/SearchForm';
 import { SideNav } from '../../components/SideNav';
 import { SongItem } from '../../components/SongItem';
+import lalaland from './../../assets/lalaland.svg';
 
-type VideoProps<T extends React.ElementType> = Component<T>;
+type GetReadyProps<T extends React.ElementType> = Component<T>;
 
-export function Video({
+export function GetReady({
   children,
   className,
   ...restProps
-}: VideoProps<'div'>) {
+}: GetReadyProps<'div'>) {
   return (
     <div className={tw('relative h-screen w-screen', className)} {...restProps}>
-      <div className="flex pb-[180px]">
+      <div className="flex">
         <SideNav className="fixed left-0 top-0 h-full overflow-y-auto pb-[100px]">
           <Logo className="w-[250px]">
             <Logo.Title className="text-base">IAM(In All Musical)</Logo.Title>
@@ -127,68 +120,16 @@ export function Video({
             </NavItem>
           </NavList>
         </SideNav>
-        <Main className="ml-[450px]">
-          <SearchForm className="relative mx-auto mb-20 w-[calc(100%-204px)]">
-            <SearchForm.Label>
-              <Input type="search" />
-              <IconButton className="absolute right-5 top-1/2 -translate-y-1/2">
-                <IconButton.Icon
-                  icon={MagnifyingGlassIcon}
-                  className="h-8 w-8"
-                />
-              </IconButton>
-            </SearchForm.Label>
-          </SearchForm>
-          <ContentsWrap>
-            <InfoCard className="w-[calc((100%-40px)/3)]">
-              <Frame className="h-[253px]">
-                <Icon icon={FilmIcon} className="h-20 w-20 text-white" />
-              </Frame>
-              <InfoCard.Title>title</InfoCard.Title>
-              <InfoCard.SubTitle>subtitle</InfoCard.SubTitle>
-            </InfoCard>
-            <InfoCard className="w-[calc((100%-40px)/3)]">
-              <Frame className="h-[253px]">
-                <Icon icon={FilmIcon} className="h-20 w-20 text-white" />
-              </Frame>
-              <InfoCard.Title>title</InfoCard.Title>
-              <InfoCard.SubTitle>subtitle</InfoCard.SubTitle>
-            </InfoCard>
-            <InfoCard className="w-[calc((100%-40px)/3)]">
-              <Frame className="h-[253px]">
-                <Icon icon={FilmIcon} className="h-20 w-20 text-white" />
-              </Frame>
-              <InfoCard.Title>title</InfoCard.Title>
-              <InfoCard.SubTitle>subtitle</InfoCard.SubTitle>
-            </InfoCard>
-            <InfoCard className="w-[calc((100%-40px)/3)]">
-              <Frame className="h-[253px]">
-                <Icon icon={FilmIcon} className="h-20 w-20 text-white" />
-              </Frame>
-              <InfoCard.Title>title</InfoCard.Title>
-              <InfoCard.SubTitle>subtitle</InfoCard.SubTitle>
-            </InfoCard>
-            <InfoCard className="w-[calc((100%-40px)/3)]">
-              <Frame className="h-[253px]">
-                <Icon icon={FilmIcon} className="h-20 w-20 text-white" />
-              </Frame>
-              <InfoCard.Title>title</InfoCard.Title>
-              <InfoCard.SubTitle>subtitle</InfoCard.SubTitle>
-            </InfoCard>
-            <InfoCard className="w-[calc((100%-40px)/3)]">
-              <Frame className="h-[253px]">
-                <Icon icon={FilmIcon} className="h-20 w-20 text-white" />
-              </Frame>
-              <InfoCard.Title>title</InfoCard.Title>
-              <InfoCard.SubTitle>subtitle</InfoCard.SubTitle>
-            </InfoCard>
-            <InfoCard className="w-[calc((100%-40px)/3)]">
-              <Frame className="h-[253px]">
-                <Icon icon={FilmIcon} className="h-20 w-20 text-white" />
-              </Frame>
-              <InfoCard.Title>title</InfoCard.Title>
-              <InfoCard.SubTitle>subtitle</InfoCard.SubTitle>
-            </InfoCard>
+        <Main className="ml-[450px] flex h-screen flex-col items-center justify-center pb-[100px]">
+          <ContentsWrap className="flex-col gap-0">
+            <h1 className="text-3xl font-bold">
+              해당 페이지는 준비 중입니다! :(
+            </h1>
+            <img
+              src={lalaland}
+              alt="LaLa Land"
+              className={tw('h-auto w-[500px]', className)}
+            />
           </ContentsWrap>
         </Main>
       </div>

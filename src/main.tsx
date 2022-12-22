@@ -7,11 +7,16 @@ import { Magazine } from './pages/Magazine';
 import { Music } from './pages/Music/Music';
 import { Show } from './pages/Show';
 import { Video } from './pages/Video';
+import { GetReady } from './pages/GetReady/GetReady';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
+  },
+  {
+    path: 'login',
+    element: <GetReady />,
   },
   {
     path: 'music',
@@ -28,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: 'magazine',
     element: <Magazine />,
+  },
+  {
+    path: 'membership',
+    element: <GetReady />,
+  },
+  {
+    path: 'inquiry',
+    element: <GetReady />,
   },
 ]);
 
