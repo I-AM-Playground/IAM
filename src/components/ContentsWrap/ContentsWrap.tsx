@@ -9,7 +9,7 @@ export function ContentsWrap({
   return (
     <div
       className={tw(
-        'flex w-full flex-row flex-wrap place-items-center gap-x-5 gap-y-20',
+        'flex w-full flex-row flex-wrap place-items-center gap-x-5 gap-y-20 font-line-seed-sans-kr',
         className
       )}
       {...restProps}
