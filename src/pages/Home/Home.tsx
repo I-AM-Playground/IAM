@@ -36,7 +36,16 @@ export function Home({ children, className, ...restProps }: HomeProps<'div'>) {
             </Logo.SubTitle>
           </Logo>
           <NavList>
-            <NavItem>로그인</NavItem>
+            <NavItem>
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive ? 'text-red' : 'text-black'
+                }
+              >
+                로그인
+              </NavLink>
+            </NavItem>
           </NavList>
           <NavList>
             <NavItem>
@@ -91,8 +100,26 @@ export function Home({ children, className, ...restProps }: HomeProps<'div'>) {
             </NavItem>
           </NavList>
           <NavList>
-            <NavItem>IAM 멤버쉽</NavItem>
-            <NavItem>문의하기</NavItem>
+            <NavItem>
+              <NavLink
+                to="/membership"
+                className={({ isActive }) =>
+                  isActive ? 'text-red' : 'text-black'
+                }
+              >
+                IAM 멤버쉽
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/inquiry"
+                className={({ isActive }) =>
+                  isActive ? 'text-red' : 'text-black'
+                }
+              >
+                문의하기
+              </NavLink>
+            </NavItem>
           </NavList>
         </SideNav>
         <Main className="ml-[450px] flex h-screen flex-col items-center justify-center pb-[100px]">
