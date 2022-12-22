@@ -4,6 +4,7 @@ import {
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline';
 import { BackwardIcon, ForwardIcon, PlayIcon } from '@heroicons/react/24/solid';
+import { NavLink } from 'react-router-dom';
 import { twMerge as tw } from 'tailwind-merge';
 import { ContentsWrap } from '../../components/ContentsWrap';
 import { Frame } from '../../components/Frame';
@@ -42,11 +43,56 @@ export function Magazine({
             <NavItem>로그인</NavItem>
           </NavList>
           <NavList>
-            <NavItem>Home</NavItem>
-            <NavItem>음원(넘버)</NavItem>
-            <NavItem>영상</NavItem>
-            <NavItem>공연정보</NavItem>
-            <NavItem>매거진</NavItem>
+            <NavItem>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? 'text-red' : 'text-black'
+                }
+              >
+                Home
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/music"
+                className={({ isActive }) =>
+                  isActive ? 'text-red' : 'text-black'
+                }
+              >
+                음원(넘버)
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/video"
+                className={({ isActive }) =>
+                  isActive ? 'text-red' : 'text-black'
+                }
+              >
+                영상
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/show"
+                className={({ isActive }) =>
+                  isActive ? 'text-red' : 'text-black'
+                }
+              >
+                공연정보
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="/magazine"
+                className={({ isActive }) =>
+                  isActive ? 'text-red' : 'text-black'
+                }
+              >
+                매거진
+              </NavLink>
+            </NavItem>
           </NavList>
           <NavList>
             <NavItem>IAM 멤버쉽</NavItem>
